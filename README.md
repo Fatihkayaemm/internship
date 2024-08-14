@@ -141,6 +141,28 @@ Host github.com-company
 
 With this configuration, you can use both SSH keys and specify which key to use for each account.
 
+**Cloning a Git Repository or Editing Remote URLs**
+
+Now, you can use the correct SSH key when cloning your projects or editing remote URLs.
+
+**Cloning for Your Personal Account:**
+
+If you want to clone this repository using your personal GitHub account (zeron1g2k@gmail.com), you should use the following command:
+
+```bash
+git clone git@github.com-personal:kayafatix/Coursera.git
+```
+
+**Cloning for Your Company Account:**
+
+If you want to clone this repository using your company account (fatih.kaya@emm-it.de), you should use the following command:
+
+```bash
+git clone git@github.com-company:Fatihkayaemm/internship.git
+```
+
+---
+
 ==========================================================
 
 
