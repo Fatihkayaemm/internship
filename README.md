@@ -3,7 +3,7 @@ This is Repo
 # Task-1
 https://vimeo.com/manage/videos/997910031
 
-#Task-2
+# Task-2/3
 Step 1: Clone the Repository
 
 	1. Open Terminal or Command Prompt:
@@ -71,10 +71,77 @@ Step 3: Add and Commit the README File to Your Repository
 		>> git push origin master
 
 =============================================================
+# Task 4/5
 
+**Creating Separate SSH Connections for Both Your Personal and Company GitHub Accounts**
 
+**1. Generate SSH Keys**
 
+You need to create separate SSH keys for your personal and company GitHub accounts. You can do this using the terminal or command line.
 
+a) **Generate SSH Key for Your Personal Account:**
+
+```bash
+ssh-keygen -t ed25519 -C "your-email@example.com" -f ~/.ssh/id_ed25519_personal
+```
+
+This command will generate an SSH key pair named `id_ed25519_personal` in the `~/.ssh/` directory.
+
+b) **Generate SSH Key for Your Company Account:**
+
+```bash
+ssh-keygen -t ed25519 -C "company-email@example.com" -f ~/.ssh/id_ed25519_company
+```
+
+This command will generate an SSH key pair named `id_ed25519_company` in the `~/.ssh/` directory.
+
+**2. Add SSH Keys to GitHub**
+
+a) **Add Your Personal SSH Key:**
+
+1. Copy the content of your personal SSH key using the following command in the terminal:
+
+```bash
+cat ~/.ssh/id_ed25519_personal.pub
+```
+
+2. Log in to GitHub, click on your profile picture in the top right corner, and go to "Settings."
+
+3. Navigate to the “SSH and GPG keys” section and click the “New SSH key” button.
+
+4. In the “Title” field, enter a name for your key (e.g., “Personal SSH Key”), paste the key content, and click the “Add SSH key” button.
+
+b) **Add Your Company SSH Key:**
+
+1. Copy the content of your company SSH key using the following command in the terminal:
+
+```bash
+cat ~/.ssh/id_ed25519_company.pub
+```
+
+2. Log in to your company's GitHub account and follow the same steps to add this SSH key.
+
+**3. Edit the SSH Config File**
+
+To manage both SSH keys, you need to edit the `~/.ssh/config` file. If the file doesn’t exist, you can create it. Add the following lines to the file:
+
+```bash
+# For Personal Account
+Host github.com-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_personal
+
+# For Company Account
+Host github.com-company
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_company
+```
+
+With this configuration, you can use both SSH keys and specify which key to use for each account.
+
+==========================================================
 
 
 
