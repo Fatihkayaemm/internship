@@ -226,6 +226,53 @@ git push origin main (or master)
 
 ---
 
+# Task-6
+
+### 1. Switch to the `master` Branch
+Ensure you’re on the `master` branch:
+
+```bash
+git checkout master
+```
+
+### 2. Create the `develop` Branch
+Create a new branch called `develop` and switch to it:
+
+```bash
+git checkout -b develop
+```
+
+### 3. Push the `develop` Branch to Remote
+Push the newly created `develop` branch to the remote repository:
+
+```bash
+git push origin develop
+```
+
+### 4. Create the `test` Branch
+Switch back to the `master` branch:
+
+```bash
+git checkout master
+```
+
+Create a new branch called `test` and switch to it:
+
+```bash
+git checkout -b test
+```
+
+### 5. Push the `test` Branch to Remote
+Push the newly created `test` branch to the remote repository:
+
+```bash
+git push origin test
+```
+
+---
+
+Now, you have both `develop` and `test` branches created and pushed to your remote repository!
+
 
 
 
