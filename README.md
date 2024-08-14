@@ -71,7 +71,7 @@ Step 3: Add and Commit the README File to Your Repository
 		>> git push origin master
 
 =============================================================
-# Task 4/5
+# Task 4
 
 **Creating Separate SSH Connections for Both Your Personal and Company GitHub Accounts**
 
@@ -161,10 +161,74 @@ If you want to clone this repository using your company account (fatih.kaya@emm-
 git clone git@github.com-company:Fatihkayaemm/internship.git
 ```
 
----
-
 ==========================================================
 
+# Task-5
+Certainly, here is the translation:
+
+---
+
+**Pushing Your Local Changes to the Company Repository on GitHub**
+
+To push the changes you've made in your local repository to the remote repository (your company's repository on GitHub), you can follow these steps:
+
+**1. Check Your Changes**
+
+First, you can see which files have been changed by using the following command:
+
+```bash
+git status
+```
+
+This command shows which files have been modified and which ones haven't been committed yet.
+
+**2. Stage the Changes**
+
+To prepare the changes for committing, you need to stage the files:
+
+- To stage all changes:
+
+```bash
+git add .
+```
+
+**3. Commit the Changes**
+
+You can commit the changes with a message describing what you've done:
+
+```bash
+git commit -m "A message describing the changes you've made"
+```
+
+**4. Push to the Remote Repository**
+
+To send the changes to the remote repository (the company repository), you'll use the `git push` command.
+
+If you've correctly configured your `~/.ssh/config` file and have an SSH connection set up for your company account, you can push using the following command:
+
+**Update the Remote Repository URL**
+
+You should update the remote URLs for both GitHub repositories as follows:
+
+- **For Personal Repository:**
+
+```bash
+git remote set-url origin git@github.com-personal:kayafatix/Coursera.git
+```
+
+- **For Company Repository:**
+
+```bash
+git remote set-url origin git@github.com-company:Fatihkayaemm/internship.git
+```
+
+Now, you can push your changes to both repositories with the correct SSH configuration:
+
+```bash
+git push origin main (or master)
+```
+
+---
 
 
 
