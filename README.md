@@ -271,7 +271,71 @@ git push origin test
 
 ---
 
-Now, you have both `develop` and `test` branches created and pushed to your remote repository!
+# Task-7
+
+### 1. Fetch Existing Branches from the Remote Repository
+
+First, you need to fetch the branches from the remote repository to your local repository:
+
+```bash
+git fetch origin
+```
+
+### 2. Track and Checkout the `develop` Branch
+
+To start tracking the `develop` branch that you created on GitHub, use the following command:
+
+```bash
+git checkout -b develop origin/develop
+```
+
+This command creates a local `develop` branch and sets it to track the `develop` branch on GitHub.
+
+### 3. Track and Checkout the `test` Branch
+
+Similarly, for the `test` branch, use the following command:
+
+```bash
+git checkout -b test origin/test
+```
+
+This will create a local `test` branch and track the `test` branch on GitHub.
+
+### 4. Add and Commit Files
+
+Now that both branches are available locally, you can add files and commit them.
+
+#### Add a File to the `develop` Branch:
+
+```bash
+git checkout develop
+echo "This is a file on the develop branch." > develop.txt
+git add develop.txt
+git commit -m "Added develop.txt to the develop branch."
+```
+
+#### Add a File to the `test` Branch:
+
+```bash
+git checkout test
+echo "This is a file on the test branch." > test.txt
+git add test.txt
+git commit -m "Added test.txt to the test branch."
+```
+
+### 5. Push Changes to the Remote Repository
+
+Finally, you can push the changes in both branches to GitHub:
+
+```bash
+# Push the develop branch
+git push origin develop
+
+# Push the test branch
+git push origin test
+```
+
+By completing these steps, you will have created the `develop` and `test` branches locally, added the respective files, and successfully pushed these changes to your GitHub repository.
 
 
 
