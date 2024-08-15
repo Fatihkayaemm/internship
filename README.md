@@ -351,3 +351,86 @@ git push origin test
 
 By completing these steps, you will have created the `develop` and `test` branches locally, added the respective files, and successfully pushed these changes to your GitHub repository.
 ========================  ================================
+
+# Task 10/11
+Here’s how to update the `test` branch with changes to the `ortak.txt` file, push those changes to the remote repository, and then merge the `test` branch into the `master` branch.
+
+### 1. Edit the `ortak.txt` File on the `test` Branch
+
+1. **Switch to the `test` Branch:**
+
+   If you're not already on the `test` branch, switch to it:
+
+   ```bash
+   git checkout test
+   ```
+
+2. **Add Information to the First 5 Lines of `ortak.txt`:**
+
+   Open `ortak.txt` in a text editor and add information to the first 5 lines. Alternatively, you can add the lines directly from the command line:
+
+   ```bash
+   echo -e "Line 1\nLine 2\nLine 3\nLine 4\nLine 5" >> ortak.txt
+   ```
+
+3. **Stage the Changes:**
+
+   Stage the changes to be committed:
+
+   ```bash
+   git add ortak.txt
+   ```
+
+4. **Commit the Changes:**
+
+   Commit the changes with a descriptive message:
+
+   ```bash
+   git commit -m "Added the first 5 lines of information to ortak.txt"
+   ```
+
+5. **Push the Changes to the Remote Repository:**
+
+   Push the changes from the `test` branch to the remote repository:
+
+   ```bash
+   git push origin test
+   ```
+
+### 2. Switch to the `master` Branch and Merge `test` into `master`
+
+1. **Switch to the `master` Branch:**
+
+   To merge `test` into `master`, first switch to the `master` branch:
+
+   ```bash
+   git checkout master
+   ```
+
+2. **Merge `test` into `master`:**
+
+   Now, merge the changes from the `test` branch into the `master` branch:
+
+   ```bash
+   git merge test
+   ```
+
+   This command merges the changes made in the `test` branch into the `master` branch. If there are no conflicts, the merge will complete successfully.
+
+3. **(Optional) Push the Merged `master` Branch to the Remote Repository:**
+
+   If you want to push the updated `master` branch to the remote repository:
+
+   ```bash
+   git push origin master
+   ```
+
+### Summary:
+- Switch to the `test` branch and edit the first 5 lines of `ortak.txt`.
+- Commit the changes and push them to the remote `test` branch.
+- Switch to the `master` branch and merge the `test` branch into it.
+- (Optional) Push the updated `master` branch to the remote repository.
+
+Following these steps, you’ll successfully merge the changes made in the `test` branch into the `master` branch.
+======================================================
+
