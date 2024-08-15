@@ -434,3 +434,76 @@ Here’s how to update the `test` branch with changes to the `ortak.txt` file, p
 
 ======================================================
 
+# Task-12
+
+### Resolving Merge Conflicts Locally
+
+1. **Perform the Merge and Encounter Conflicts**
+
+   When you attempt to merge `develop` into `master`, if there are conflicts, Git will indicate this. Run the merge command:
+
+   ```bash
+   git merge develop
+   ```
+
+   If there are conflicts, Git will output a message similar to:
+
+   ```
+   CONFLICT (content): Merge conflict in ortak.txt
+   Automatic merge failed; fix conflicts and then commit the result.
+   ```
+
+2. **Inspect the Conflicting Files**
+
+   Git will mark the files with conflicts. Open the conflicting file(s) to view and resolve the conflicts. For example, if `ortak.txt` is conflicting:
+
+   ```bash
+   nano ortak.txt
+   ```
+
+   You will see conflict markers in the file like this:
+
+   ```plaintext
+   <<<<<<< HEAD
+   This is the content from the master branch
+   =======
+   This is the content from the develop branch
+   >>>>>>> develop
+   ```
+
+   - `<<<<<<< HEAD`: This section shows the changes from the current branch (`master`).
+   - `=======`: This separates the changes from the two branches.
+   - `>>>>>>> develop`: This section shows the changes from the branch being merged (`develop`).
+
+   Resolve the conflict by editing the file to incorporate the changes as needed. You need to remove the conflict markers and adjust the content accordingly.
+
+   For example:
+
+   ```plaintext
+   This is the resolved content that combines both branches.
+   ```
+
+3. **Stage the Resolved Files**
+
+   After resolving conflicts, stage the resolved files using:
+
+   ```bash
+   git add ortak.txt
+   ```
+
+4. **Commit the Merge**
+
+   Commit the resolved changes:
+
+   ```bash
+   git commit -m "Resolved merge conflicts"
+   ```
+
+### Summary
+
+- **Merge**: Run `git merge develop` to start the merge process.
+- **Resolve Conflicts**: Edit the files with conflicts, remove conflict markers, and adjust the content.
+- **Stage**: Use `git add` to stage the resolved files.
+- **Commit**: Use `git commit` to finalize the merge.
+
+==========================================================
