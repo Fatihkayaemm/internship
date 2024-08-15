@@ -431,6 +431,6 @@ Here’s how to update the `test` branch with changes to the `ortak.txt` file, p
 - Switch to the `master` branch and merge the `test` branch into it.
 - (Optional) Push the updated `master` branch to the remote repository.
 
-Following these steps, you’ll successfully merge the changes made in the `test` branch into the `master` branch.
+
 ======================================================
 
